@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <script>
+        class Stack {
+            #items;
+            constructor() {
+                this.#items = [];
+            }
+
+            push(item) {
+                this.#items.push(item);
+            }
+
+            pop() {
+                return this.#items.pop();
+            }
+
+            top() {
+                return this.#items[this.#items.length - 1]
+            }
+
+            print() {
+                return this.#items.join(" -> ");
+            }
+        }
+
+        const stack = new Stack();
+        stack.push('A');
+        stack.push('B');
+        stack.push('C');
+        console.log(stack.print());
+        console.log(stack.pop());
+        console.log(stack.print());
+        console.log(stack.top());
+    </script>
+</head>
+
+</html>
